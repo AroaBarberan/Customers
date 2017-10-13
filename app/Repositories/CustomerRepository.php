@@ -11,4 +11,7 @@ class CustomerRepository
     {
         return Customer::all();
     }
+    public function read($id) {
+        return Customer::all()->find($id);
+    }
 }

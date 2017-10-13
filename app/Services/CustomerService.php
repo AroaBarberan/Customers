@@ -16,8 +16,10 @@ class CustomerService
     }
 
     public function readAll(Request $request) {
-        $customers = $this->repository->readAll();
+        return $this->repository->readAll();
+    }
 
-        return $customers;
+    public function read($id) {
+        return $this->repository->read($id);
     }
 }

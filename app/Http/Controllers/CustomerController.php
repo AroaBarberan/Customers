@@ -21,4 +21,13 @@ class CustomerController extends Controller
 
         return view('customer.index', ['customers' => $customers]);
     }
+
+    public function show($id){
+        $customer = $this->service->read($id);
+        return view('customer.show', ['customer' => $customer]);
+    }
+
+    public function create() {
+        return view('customer.create');
+    }
 }

@@ -17,5 +17,6 @@
                 <td><img class="avatar" src="/img/{{$customer->avatar}}" alt=""></td>
             </tr>
         @endforeach
+        <a href=" {{ route('customer.create') }}">Create Customer</a>
     </table>
 @endsection
