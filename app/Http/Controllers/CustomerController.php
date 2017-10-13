@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Customer;
+use App\Services\CustomerService;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
 
 class CustomerController extends Controller
 {
@@ -14,7 +15,8 @@ class CustomerController extends Controller
         $this->service = $customerService;
     }
 
-    public function index(Request $request){
+    public function index(Request $request)
+    {
         $customers = $this->service->readAll($request);
 
         return view('customer.index', ['customers' => $customers]);
