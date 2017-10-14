@@ -29,4 +29,7 @@ class CustomerService
     {
         $this->repository->save($customer);
     }
+    public function delete($id){
+        $this->repository->delete($id);
+    }
 }

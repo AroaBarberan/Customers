@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Customer;
 use App\Services\CustomerService;
-use Dotenv\Validator;
 use Illuminate\Http\Request;
 
 class CustomerController extends Controller
@@ -49,5 +48,10 @@ class CustomerController extends Controller
         $this->service->save($customer);
         return redirect()->route('customer.index');
 
+    }
+
+    public function delete($id) {
+        $this->service->delete($id);
+        return redirect()->route('customer.index');
     }
 }

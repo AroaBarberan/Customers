@@ -21,4 +21,8 @@ class CustomerRepository
     {
         $customer->save();
     }
+    public function delete($id) {
+        $customer = Customer::all()->find($id);
+        $customer->delete();
+    }
 }

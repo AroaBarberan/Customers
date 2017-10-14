@@ -10,12 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/home', 'HomeController@index')->name('home');
+Auth::routes();
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'CustomerController@index')->name('customer.index');
+Route::get('/create', 'CustomerController@create')->name('customer.create');
+Route::get('/{id}', 'CustomerController@show')->name('customer.show');
+Route::post('/store', 'CustomerController@store')->name('customer.store');
 
-Route::get('/customers', 'CustomerController@index')->name('customer.index');
-Route::get('/customers/create', 'CustomerController@create')->name('customer.create');
-Route::get('/customers/{id}', 'CustomerController@show')->name('customer.show');
-Route::post('/customers/store', 'CustomerController@store')->name('customer.store');
+Route::get('/{id}/delete', 'CustomerController@delete')->name('customer.delete');
