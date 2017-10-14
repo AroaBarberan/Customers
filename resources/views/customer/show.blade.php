@@ -1,6 +1,5 @@
 @extends('base')
-
-@section('title', 'Customer show')
+@section('title', 'Customers Show')
 
 @section('main')
     <table>
@@ -11,10 +10,10 @@
             <th>Avatar</th>
         </tr>
         <tr>
-            <td>{{ $customer->id }}</td>
-            <td>{{ $customer->name }}</td>
-            <td>{{ $customer->lastname }}</td>
-            <td>{{ $customer->avatar }}</td>
+            {{--<td>{{ $customer->id }}</td>--}}
+            {{--<td>{{ $customer->name }}</td>--}}
+            {{--<td>{{ $customer->lastname }}</td>--}}
+            {{--<td><img class="avatar" src="/img/{{ $customer->avatar }}"></td>--}}
         </tr>
     </table>
 @endsection

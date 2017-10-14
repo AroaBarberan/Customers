@@ -16,5 +16,6 @@ Route::get('/', function () {
 });
 
 Route::get('/customers', 'CustomerController@index')->name('customer.index');
-Route::get('/customers/{id}', 'CustomerController@show')->name('customer.show');
 Route::get('/customers/create', 'CustomerController@create')->name('customer.create');
+Route::get('/customers/{id}', 'CustomerController@show')->name('customer.show');
+Route::post('/customers/store', 'CustomerController@store')->name('customer.store');
