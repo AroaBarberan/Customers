@@ -15,11 +15,18 @@ class CustomerService
         $this->repository = $customerRepository;
     }
 
-    public function readAll(Request $request) {
+    public function readAll(Request $request)
+    {
         return $this->repository->readAll();
     }
 
-    public function read($id) {
+    public function read($id)
+    {
         return $this->repository->read($id);
+    }
+
+    public function save(Customer $customer)
+    {
+        $this->repository->save($customer);
     }
 }

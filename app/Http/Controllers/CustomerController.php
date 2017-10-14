@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Customer;
 use App\Services\CustomerService;
+use Dotenv\Validator;
 use Illuminate\Http\Request;
 
 class CustomerController extends Controller
@@ -22,7 +23,8 @@ class CustomerController extends Controller
         return view('customer.index', ['customers' => $customers]);
     }
 
-    public function show($id){
+    public function show($id)
+    {
         $customer = $this->service->read($id);
         return view('customer.show', ['customer' => $customer]);
     }
@@ -32,7 +34,20 @@ class CustomerController extends Controller
         return view('customer.create');
     }
 
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required',
+            'lastname' => 'required',
+            'avatar' => 'required'
+        ]);
+        $customer = new Customer([
+            'name' => $request->input('name'),
+            'lastname' => $request->input('lastname'),
+            'avatar' => $request->input('avatar')
+        ]);
+        $this->service->save($customer);
+        return redirect()->route('customer.index');
 
     }
 }

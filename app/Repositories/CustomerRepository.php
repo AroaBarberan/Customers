@@ -11,7 +11,14 @@ class CustomerRepository
     {
         return Customer::all();
     }
-    public function read($id) {
+
+    public function read($id)
+    {
         return Customer::all()->find($id);
+    }
+
+    public function save(Customer $customer)
+    {
+        $customer->save();
     }
 }

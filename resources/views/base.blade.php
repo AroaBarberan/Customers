@@ -6,12 +6,11 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- Latest compiled and minified CSS -->
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-
-    {{--<link rel="stylesheet" href="css/app.css">--}}
+    <link rel="stylesheet" href="css/app.css">
     <title>@yield('title', 'Customers')</title>
     <style>
         * {
@@ -52,7 +51,7 @@
             margin-top: 150px;
             background-color: #fff;
             border-radius: 5px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
         }
 
         fieldset, .form-group, label {
@@ -61,7 +60,7 @@
         }
 
         legend {
-            padding: 8px;
+            padding: 5px;
             font-size: 36px;
             color: #fff;
             border-radius: 5px;
@@ -72,10 +71,10 @@
         .form div {
             padding: 10px;
         }
-        .col-lg-11 {
-            mar: 0;
-        }
 
+        .back {
+            margin: 70%;
+        }
     </style>
 </head>
 <body>
