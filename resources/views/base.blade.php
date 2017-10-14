@@ -21,11 +21,9 @@
             margin: auto;
             margin-top: 200px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-
             background-color: #e1e1e1;
-            border-radius: 5px;
+        }
 
-        }\
         tr, th {
             padding: 20px 50px;
             font-size: 16px;
@@ -76,16 +74,17 @@
         .back {
             margin: 70%;
         }
+
         span {
             color: #000;
+            margin-left: 12px;
             background-color: #fff;
         }
+
         .icon {
             padding: 5px 10px;
         }
-        span {
-            margin-left: 12px;
-        }
+
     </style>
 </head>
 <body>

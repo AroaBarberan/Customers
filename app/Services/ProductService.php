@@ -2,17 +2,19 @@
 
 namespace App\Services;
 
-use App\Customer;
-use App\Repositories\CustomerRepository;
-use Illuminate\Http\Request;
 
-class CustomerService
+use App\Product;
+use Illuminate\Foundation\ProviderRepository;
+use App\Repositories\ProductRepository;
+
+
+class ProductService
 {
     private $repository;
 
-    public function __construct(CustomerRepository $customerRepository)
+    public function __construct(ProductRepository $productRepository)
     {
-        $this->repository = $customerRepository;
+        $this->repository = $productRepository;
     }
 
     public function readAll()
@@ -25,9 +27,9 @@ class CustomerService
         return $this->repository->read($id);
     }
 
-    public function save(Customer $customer)
+    public function save(Product $product)
     {
-        $this->repository->save($customer);
+        $this->repository->save($product);
     }
 
     public function delete($id)

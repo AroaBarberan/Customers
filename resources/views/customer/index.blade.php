@@ -24,12 +24,12 @@
                 <td>{{ $customer->id }}</td>
                 <td>{{ $customer->name }}</td>
                 <td>{{ $customer->lastname }}</td>
-                <td><img class="avatar" src="/img/{{$customer->avatar}}" alt=""></td>
+                <td><img class="avatar" src="/img/{{ $customer->avatar }}" alt=""></td>
                 @if(Auth::user())
                     <td class="icon"><a href="{{ route('customer.show', [$customer->id]) }}"><span
                                     class="glyphicon glyphicon-eye-open"></span></a>
                         <a href=""></a></td>
-                    <td class="icon"><a href="{{ route('customer.delete', ['id' => $customer->id]) }}"><span
+                    <td class="icon"><a href=""><span
                                     class="glyphicon glyphicon-pencil"></span></a></td>
                     <td class="icon"><a href="{{ route('customer.delete', ['id' => $customer->id]) }}"><span
                                     class="glyphicon glyphicon-remove"></span></a></td>

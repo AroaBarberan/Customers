@@ -15,9 +15,9 @@ class CustomerController extends Controller
         $this->service = $customerService;
     }
 
-    public function index(Request $request)
+    public function index()
     {
-        $customers = $this->service->readAll($request);
+        $customers = $this->service->readAll();
 
         return view('customer.index', ['customers' => $customers]);
     }
