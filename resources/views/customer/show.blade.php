@@ -18,7 +18,8 @@
             <td>{{ $customer->lastname }}</td>
             <td><img class="avatar" src="/img/{{ $customer->avatar }}"></td>
             @if(Auth::user())
-                <td class="icon"><a href=""><span class="glyphicon glyphicon-arrow-right"></span></a></td>
+                <td class="icon"><a href="{{ route('product.showSome', [$customer->id]) }}"><span
+                                class="glyphicon glyphicon-arrow-right"></span></a></td>
             @endif
         </tr>
     </table>

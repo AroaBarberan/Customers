@@ -13,4 +13,9 @@ class Customer extends Model
 {
     protected $table = 'customers';
     protected $fillable = ['name', 'lastname', 'avatar'];
+
+    public function products()
+    {
+        return $this->hasMany('App\Product', 'customer_id', 'id');
+    }
 }

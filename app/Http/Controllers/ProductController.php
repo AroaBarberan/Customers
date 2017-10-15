@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Customer;
 use Illuminate\Http\Request;
 use App\Services\ProductService;
 
@@ -18,6 +19,22 @@ class ProductController extends Controller
     public function index()
     {
         $products = $this->service->readAll();
+
+        return view('product.index', ['products' => $products]);
+    }
+
+    public function showSome($id)
+    {
+        $customer = Customer::find($id);
+        $products = $customer->products;
+
+//        $pros = $this->service->readAll();
+//        $products = [];
+//        foreach ($pros as $pro) {
+//            if ($id == $pro->customer_id) {
+//                $products[] = $pro;
+//            }
+//        }
 
         return view('product.index', ['products' => $products]);
     }
