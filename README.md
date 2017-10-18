@@ -1,4 +1,2 @@
 # Customers
-
-
 Little aplication MVC.
